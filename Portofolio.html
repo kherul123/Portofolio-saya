@@ -1,0 +1,450 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kherul Anwar Hasbiyan - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- === [1] SEO & Social (Tambahan) === -->
+    <meta name="description" content="Portfolio Kherul Anwar Hasbiyan — Junior Web Developer (CodeIgniter 3, AdminLTE 3). Siap membantu bangun website cepat & responsif.">
+    <meta property="og:title" content="Kherul Anwar Hasbiyan — Portfolio">
+    <meta property="og:description" content="Junior Web Developer. Lihat project, layanan, dan hubungi via WhatsApp.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/preview.jpg">
+    <meta property="og:url" content="https://lynk.id/username-kamu">
+    <link rel="canonical" href="https://lynk.id/username-kamu">
+    <link rel="icon" href="favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Kherul Anwar Hasbiyan",
+      "jobTitle": "Junior Web Developer",
+      "url": "https://lynk.id/username-kamu",
+      "image": "images/kherul.jpg",
+      "sameAs": ["https://www.linkedin.com/in/username","https://github.com/username"]
+    }
+    </script>
+
+    <!-- === CSS ASLI KAMU (TIDAK DIUBAH) === -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            padding: 0 5%;
+            background-color: #ffffff;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #1e3a8a;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            color: #6b7280;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: #1e3a8a;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: #1e40af;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: #e5e7eb;
+            color: #1e3a8a;
+        }
+
+        .btn-secondary:hover {
+            background-color: #d1d5db;
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            flex: 1;
+            max-width: 400px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out 0.5s both;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            padding: 4rem 5%;
+            background-color: #f8f9fa;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1e3a8a;
+            text-align: center;
+        }
+
+        .section p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #6b7280;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .project img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem 5%;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .hero-image {
+                margin-top: 2rem;
+            }
+        }
+    </style>
+
+    <!-- === [2] CSS TAMBAHAN (Dark mode, navbar, chips, cards, FAQ) === -->
+    <style>
+    :root {
+      --bg:#ffffff; --text:#333; --muted:#6b7280; --brand:#1e3a8a; --brand-2:#1e40af; --card:#fff; --ring:#e5e7eb;
+    }
+    :root.dark {
+      --bg:#0b1220; --text:#e5e7eb; --muted:#94a3b8; --brand:#7aa2ff; --brand-2:#a9c1ff; --card:#0f1629; --ring:#1f2937;
+    }
+    @media (prefers-color-scheme: dark){ :root { color-scheme: dark; } }
+
+    body { background:var(--bg); color:var(--text); }
+
+    .navbar {
+      position: sticky; top:0; z-index: 50; background: var(--bg);
+      border-bottom:1px solid var(--ring); padding: 0.75rem 5%;
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .navbar a { color:var(--text); text-decoration:none; font-weight:600; }
+    .nav-actions { display:flex; gap:.5rem; align-items:center; }
+    .badge {
+      display:inline-block; padding:.4rem .7rem; border:1px solid var(--ring);
+      border-radius:999px; font-size:.9rem; color:var(--text); background:var(--card);
+    }
+    .section .chip-group { display:flex; gap:.5rem; flex-wrap:wrap; justify-content:center; }
+
+    .card {
+      background:var(--card); border:1px solid var(--ring); border-radius:12px; padding:1.25rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,.04); transition: transform .2s;
+    }
+    .card:hover { transform: translateY(-3px); }
+
+    .pricing { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; }
+    .price { font-size:1.8rem; font-weight:700; color:var(--brand); }
+
+    .testimonials { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; }
+
+    .faq { max-width:950px; margin: 0 auto; }
+    .faq details { border:1px solid var(--ring); border-radius:10px; padding:1rem 1.2rem; background:var(--card); }
+    .faq details + details { margin-top:.75rem; }
+    .faq summary { cursor:pointer; font-weight:600; }
+
+    .btn-outline { background:transparent; border:1px solid var(--ring); color:var(--text); }
+    .btn-outline:hover { border-color:var(--brand); color:#fff; background:var(--brand); }
+
+    .toggle {
+      border:1px solid var(--ring); background:var(--card); color:var(--text);
+      padding:.5rem .8rem; border-radius:8px; cursor:pointer;
+    }
+
+    .hero-image img { aspect-ratio: 3/4; object-fit: cover; }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+    </style>
+</head>
+<body>
+
+    <!-- === [3] NAVBAR + DARK MODE TOGGLE (Tambahan) === -->
+    <nav class="navbar" aria-label="Site">
+      <a href="#" aria-label="Home">Kherul<span style="color:var(--brand)">.</span></a>
+      <div class="nav-actions">
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact" class="btn btn-primary" style="margin-left:.5rem;">Hire Me</a>
+        <button id="themeToggle" class="toggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
+    </nav>
+
+    <!-- === KODE ASLI KAMU (TIDAK DIUBAH) === -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>I’m Kherul Anwar Hasbiyan</h1>
+            <p>Junior Web Developer</p>
+            <div class="buttons">
+                <a href="#about" class="btn btn-primary">Learn More</a>
+                <a href="https://wa.me/6281567979315" class="btn btn-secondary">Contact Me via WhatsApp</a>
+            </div>
+        </div>
+        <div class="hero-image">
+    <img src="https://raw.githubusercontent.com/kherul123/Portofolio/main/assets/kherul.jpg" alt="Kherul Anwar Hasbiyan"
+      width="400" loading="lazy">
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>Tentang Saya</h2>
+        <p>Saya adalah lulusan D3 Teknik Komputer yang memiliki keahlian dalam pengembangan website menggunakan CodeIgniter 3 dan
+		template AdminLTE.
+		Terampil dalam mengelola tampilan web (front-end), memodifikasi desain, serta menyesuaikan konten agar lebih interaktif
+		dan responsif di berbagai perangkat.
+		Saya memiliki ketertarikan besar pada dunia teknologi dan selalu berusaha mengembangkan kemampuan di bidang pemrograman
+		dan sistem informasi.</p>
+    </section>
+
+    <!-- Anchor agar link #projects di navbar tetap bekerja tanpa mengubah section lama -->
+    <span id="projects"></span>
+
+    <section class="section">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project">
+        <img src="https://raw.githubusercontent.com/kherul123/Portofolio/main/assets/a1.png" alt="project 1"
+          width="400" loading="lazy">
+                <h3>Project 1</h3>
+                <p>Description of project 1. Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="project">
+        <img src="https://raw.githubusercontent.com/kherul123/Portofolio/main/assets/a2.png" alt="project 2" width="400"
+          loading="lazy">
+                <h3>Project 2</h3>
+                <p>Description of project 2. Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="project">
+    <img src="https://raw.githubusercontent.com/kherul123/Portofolio/main/assets/a3.png" alt="project 3" width="400"
+      loading="lazy">
+                <h3>Project 3</h3>
+                <p>Description of project 3. Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- === [4] Skills (Tambahan) === -->
+    <section class="section" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills & Tools</h2>
+      <p>Stack yang sering dipakai untuk bikin web cepat & responsif.</p>
+      <div class="chip-group">
+        <span class="badge">CodeIgniter 3</span>
+        <span class="badge">AdminLTE 3</span>
+        <span class="badge">PHP & MySQL</span>
+        <span class="badge">HTML5</span>
+        <span class="badge">CSS3</span>
+        <span class="badge">Bootstrap</span>
+        <span class="badge">jQuery</span>
+        <span class="badge">Git</span>
+      </div>
+    </section>
+
+    <!-- === [5] Services & Pricing (Tambahan) === -->
+    <section id="services" class="section" aria-labelledby="svc-title">
+      <h2 id="svc-title">Services & Pricing</h2>
+      <p>Paket cepat untuk UMKM/Personal brand. Custom juga bisa.</p>
+      <div class="pricing">
+        <div class="card">
+          <h3>Landing Page</h3>
+          <p class="price">Rp300K</p>
+          <ul>
+            <li>1 halaman responsif</li><li>CTA WhatsApp</li><li>Deploy basic</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary" style="margin-top:.8rem">Order</a>
+        </div>
+        <div class="card">
+          <h3>Company Profile</h3>
+          <p class="price">Rp700K</p>
+          <ul>
+            <li>3–5 halaman</li><li>Form kontak</li><li>SEO dasar</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary" style="margin-top:.8rem">Order</a>
+        </div>
+        <div class="card">
+          <h3>Admin Panel (CI3 + AdminLTE)</h3>
+          <p class="price">Start Rp900K</p>
+          <ul>
+            <li>CRUD modular</li><li>Auth & role</li><li>Dokumentasi</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline" style="margin-top:.8rem">Konsultasi</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- === [6] Testimonials (Tambahan) === -->
+    <section class="section" aria-labelledby="testi-title">
+      <h2 id="testi-title">Testimonials</h2>
+      <div class="testimonials">
+        <div class="card"><p>“Order landing page, jadi 2 hari. Rapi & cepat respon.”</p><strong>— Andi, UMKM</strong></div>
+        <div class="card"><p>“Admin panel CI3-nya clean, gampang di-maintain.”</p><strong>— Rina, Freelancer</strong></div>
+        <div class="card"><p>“Portofolionya ringan & mobile-friendly, mantap.”</p><strong>— Dimas, Client</strong></div>
+      </div>
+    </section>
+
+    <!-- === [7] FAQ (Tambahan) === -->
+    <section class="section faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">FAQ</h2>
+      <details>
+        <summary>Berapa lama pengerjaan?</summary>
+        <p>Landing page 1–3 hari; proyek lain tergantung scope.</p>
+      </details>
+      <details>
+        <summary>Revisi bagaimana?</summary>
+        <p>Termasuk 2x revisi minor di semua paket.</p>
+      </details>
+      <details>
+        <summary>Apakah bisa mengerjakan projek lain seperti word atau excel?</summary>
+        <p>Bisa Makalah, Tugas Akhir, Skripsi, Tugas Sekolah, dan Untuk Excel Seperti Laporan Stok, Pivot, input data otomatis, sistem Gaji karyawan</p>
+      </details>
+    </section>
+
+    <!-- === [8] Contact & Footer (Tambahan) === -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <h2 id="contact-title">Let’s Work Together</h2>
+      <p>Jelaskan kebutuhanmu, aku balas secepatnya.</p>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <a class="btn btn-primary" href="https://wa.me/6281567979315?text=Halo%20Kherul,%20saya%20butuh%20website">Chat WhatsApp</a>
+        <a class="btn btn-secondary" href="mailto:kherulhasbiyan@gmail.com">Email</a>
+      <!-- Tombol Download CV -->
+      <a class="btn btn-outline" href="https://raw.githubusercontent.com/kherul123/Portofolio/main/CV%20KHERUL.pdf" download>
+        📄 Download CV
+      </a>
+      </div>
+    </section>
+
+    <footer class="section" style="text-align:center; padding-top:2rem;">
+      <p>&copy; <span id="y"></span> Kherul Anwar Hasbiyan • 
+        <a href="https://www.linkedin.com/in/username">LinkedIn</a> ·
+        <a href="https://github.com/username">GitHub</a> ·
+        <a href="https://lynk.id/username-kamu">Lynk.id</a>
+      </p>
+    </footer>
+
+    <!-- === [9] Script kecil: tahun, dark-mode, lazy img (Tambahan) === -->
+    <script>
+      // Tahun otomatis
+      document.getElementById('y').textContent = new Date().getFullYear();
+
+      // Dark mode toggle (persist di localStorage)
+      const root = document.documentElement;
+      const key = 'theme';
+      if (localStorage.getItem(key) === 'dark' || 
+         (!localStorage.getItem(key) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        root.classList.add('dark');
+      }
+      document.getElementById('themeToggle').onclick = () => {
+        root.classList.toggle('dark');
+        localStorage.setItem(key, root.classList.contains('dark') ? 'dark' : 'light');
+      };
+
+      // Jadikan semua gambar lazy + decoding async
+      document.querySelectorAll('img').forEach(img => {
+        img.loading = 'lazy';
+        img.decoding = 'async';
+      });
+    </script>
+</body>
+</html>
